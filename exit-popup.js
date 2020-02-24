@@ -1,5 +1,5 @@
 <script>
-  var storage = localStorage.getItem('endyStorage')
+  var storage = localStorage.getItem('storage')
   storage = storage ? JSON.parse(storage) : {}
   //if user hasn't seen the pop up, add event listener
 
@@ -22,10 +22,10 @@
       duration: .25,
       ease: Power2.easeIn
     })
-    var existingStorage = localStorage.getItem('endyStorage')
+    var existingStorage = localStorage.getItem('storage')
     existingStorage = existingStorage ? JSON.parse(existingStorage) : {};
     existingStorage['exitPopUp'] = true;
-    localStorage.setItem('endyStorage', JSON.stringify(existingStorage));
+    localStorage.setItem('storage', JSON.stringify(existingStorage));
     exitPopBtn.addEventListener("click", closeExitPopUp)
     exitPop.addEventListener("click", closeExitPopUp)
   }
